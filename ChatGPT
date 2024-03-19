@@ -70,13 +70,13 @@ private static final String OPENAI_API_KEY = "Api-Key";
     }// </editor-fold>                        
 
     private void ChatActionPerformed(java.awt.event.ActionEvent evt) {                                     
-       // Obtener el mensaje del usuario
+       
         String userMessage = JOptionPane.showInputDialog("Ingrese su mensaje:");
 
-        // Agregar el mensaje del usuario al historial
+        
         appendToChat("Usuario: " + userMessage);
 
-        // Realizar la solicitud a la API de OpenAI y mostrar la respuesta en el historial
+        
         String response = performChatRequest(userMessage);
         appendToChat("Asistente: " + extractAssistantResponse(response));
     }                                    
@@ -144,11 +144,7 @@ private static String performChatRequest(String userMessage) {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
