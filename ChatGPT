@@ -160,13 +160,13 @@ private static final String OPENAI_API_KEY = "OpenAI-Key";
     }// </editor-fold>                        
 
     private void ChatActionPerformed(java.awt.event.ActionEvent evt) {                                     
-       // Obtener el mensaje del usuario
+       
         String userMessage = JOptionPane.showInputDialog("Ingrese su mensaje:");
 
-        // Agregar el mensaje del usuario al historial
+        
         appendToChat("Usuario: " + userMessage);
 
-        // Realizar la solicitud a la API de OpenAI y mostrar la respuesta en el historial
+        
         String response = performChatRequest(userMessage);
         appendToChat("Asistente: " + extractAssistantResponse(response));
     }                                    
@@ -176,10 +176,10 @@ private static void appendToChat(String message) {
     }
 private static String performChatRequest(String userMessage) {
         try {
-            // URL de la API de OpenAI
+            
             URL url = new URL("https://api.openai.com/v1/chat/completions");
 
-            // Abrir conexión HTTP
+            
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             
@@ -204,10 +204,10 @@ private static String performChatRequest(String userMessage) {
                 wr.writeBytes(jsonInputString);
             }
 
-            // Obtener la respuesta
+            
             int responseCode = connection.getResponseCode();
 
-            // Leer la respuesta
+            
             try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 StringBuilder response = new StringBuilder();
                 String inputLine;
