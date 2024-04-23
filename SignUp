@@ -177,9 +177,10 @@ public class SignUp extends javax.swing.JFrame {
             email    = emailAddress.getText();
             Password = pass.getText();
             System.out.println(Password);
-            
+            System.out.println(email);
+            System.out.println(fullName);
             query = "INSERT INTO user(full_name, email, password)"+
-                    "VALUES('"+fullName+"', '"+emailAddress+"' , '"+Password+"')";
+                    "VALUES('"+fullName+"', '"+email+"' , '"+Password+"')";
             
             st.execute(query);
             fname.setText("");
@@ -212,7 +213,7 @@ public class SignUp extends javax.swing.JFrame {
         });
     }
 
-                      
+    // Variables declaration - do not modify                     
     private javax.swing.JButton SignUpBtn;
     private javax.swing.JTextField emailAddress;
     private javax.swing.JTextField fname;
@@ -226,5 +227,5 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField pass;
-                
+    // End of variables declaration                   
 }
