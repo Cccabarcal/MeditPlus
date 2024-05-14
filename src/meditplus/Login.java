@@ -183,6 +183,9 @@ public class Login extends javax.swing.JFrame {
                 HomeFrame.pack();
                 HomeFrame.setLocationRelativeTo(null); 
                 this.dispose();
+                
+                        
+                
             }else{
                JOptionPane.showMessageDialog(new JFrame(), "Email o Contraseña incorrecta", "Error",
                         JOptionPane.ERROR_MESSAGE);

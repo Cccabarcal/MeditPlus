@@ -4,8 +4,11 @@
  */
 package meditplus;
 
+import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -154,6 +157,11 @@ mostrarTiempo();
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ContenidoVisual/Libro.png"))); // NOI18N
         jButton2.setText("Diario AutoReflexion");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -340,6 +348,19 @@ mostrarTiempo();
         SueñoFrame.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         JOptionPane.showMessageDialog(null, "Para tu Diario de Autoreflexion , te recomendamos esta pagina la cual es online y podras abrirla desde pc o movil");
+        try {
+                    Desktop.getDesktop().browse(new URI("https://memoshare.io/"));
+                } catch (Exception ex) {
+                    
+                
+                    ex.printStackTrace();
+                    }
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
