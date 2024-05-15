@@ -19,7 +19,7 @@ import org.json.JSONObject;
  * @author crist
  */
 public class ChatGPT extends javax.swing.JFrame {
-private static final String OPENAI_API_KEY = "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"; 
+private static final String OPENAI_API_KEY = "OPENAI_KEY"; 
     private static JTextArea chatTextArea;
     Tiempopro time= new Tiempopro();
      
